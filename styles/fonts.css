@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'PalanquinDark';
+    src: url(../assets/fonts/PalanquinDark-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Palanquin';
+    src: url(../assets/fonts/Palanquin-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Palanquin', sans-serif;
+}
+
+h1 {
+    font-family: 'PalanquinDark', sans-serif;
+    font-size: 48px;
+    transform: translateY(-8%);
+}
+
+h1 span{
+    color: #E76C1F;
+}
+
+h2{
+    font-size: 40px;
+    margin-block: 0;
+}

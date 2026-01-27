@@ -1,0 +1,78 @@
+nav{
+    background-color: #E76C1F;
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 40px;
+}
+
+header{
+    background-image: url(./assets/img/Header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    height: 636px;
+}
+
+.header_Icon_Burger{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+.mainTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 132px
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.title img{
+    height: 32px;
+}
+
+.mainDishes{
+    margin-bottom: 64px;
+}
+
+.header_dishes{
+    background-color: #E76C1F;
+    height: 60px;
+    color:white;
+    display: flex;
+    padding-left: 120px;
+    gap:32px
+}
+
+.header_dishes img {
+    height: 90px;
+    transform: translateY(-30%);
+}
+
+.header_dishes h2 {
+    transform: translateY(-18%);
+}
+
+footer{
+    background-color: #E76C1F;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    color: white;
+}
