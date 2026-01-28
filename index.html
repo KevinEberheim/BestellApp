@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="style.css">
+    <script src="./scripts/templates.js"></script>
+    <script src="./script.js"></script>
 </head>
-<body>
+
+<body onload="renderAllDishes()">
     <header>
         <nav>
             <img src="assets/icons/Logo_02.svg" alt="Logo.svg">
@@ -31,10 +35,10 @@
                 <img src="./assets/icons/Burger_Section.png" alt="Burger.png">
                 <h2>Burger</h2>
             </div>
+            <section id="burgerDishes">
+    
+            </section>
 
-            <div class="dishes" id="burger_Dishes">
-
-            </div>
         </section>
         <section class="mainDishes">
             <div class="header_dishes">
@@ -42,9 +46,9 @@
                 <h2>Pizza (30cm)</h2>
             </div>
 
-            <div class="dishes" id="pizza_Dishes">
+            <section id="pizzaDishes">
 
-            </div>
+            </section>
         </section>
         <section class="mainDishes">
             <div class="header_dishes">
@@ -52,11 +56,11 @@
                 <h2>Salad</h2>
             </div>
 
-            <div class="dishes" id="salad_Dishes">
+            <section id="saladDishes">
 
-            </div>
+            </section>
         </section>
-        
+
     </main>
     <footer>
         <span>
@@ -70,4 +74,5 @@
         </span>
     </footer>
 </body>
+
 </html>

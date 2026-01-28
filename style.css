@@ -67,6 +67,32 @@ header{
     transform: translateY(-18%);
 }
 
+.dishes{
+    background-color: #FDEADC;
+    display: flex;
+    gap:32px;
+    padding: 32px;
+    width: 820px;
+    max-width: 1440px;
+    margin-left: 120px;
+    margin-top: 16px;
+}
+
+.dishes img {
+    height: 120px;
+}
+
+.descriptionDishes{
+    flex: 1;
+}
+
+.priceDishes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 footer{
     background-color: #E76C1F;
     height: 128px;
