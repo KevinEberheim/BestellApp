@@ -1,4 +1,4 @@
-nav{
+nav {
     background-color: #E76C1F;
     height: 128px;
     display: flex;
@@ -8,7 +8,7 @@ nav{
     padding-right: 40px;
 }
 
-header{
+header {
     background-image: url(./assets/img/Header.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,16 +17,16 @@ header{
     height: 636px;
 }
 
-.header_Icon_Burger{
+.header_Icon_Burger {
     width: 200px;
     height: 200px;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,50%);
+    transform: translate(-50%, 50%);
 }
 
-.mainTitle{
+.mainTitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,28 +34,29 @@ header{
     margin-block: 132px
 }
 
-.title{
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
 }
 
-.title img{
+.title img {
     height: 32px;
 }
 
-.mainDishes{
+.mainDishes {
     margin-bottom: 64px;
+    grid-column: 1 / -1;
 }
 
-.header_dishes{
+.header_dishes {
     background-color: #E76C1F;
     height: 60px;
-    color:white;
+    color: white;
     display: flex;
     padding-left: 120px;
-    gap:32px
+    gap: 32px;
 }
 
 .header_dishes img {
@@ -67,10 +68,10 @@ header{
     transform: translateY(-18%);
 }
 
-.dishes{
+.dishes {
     background-color: #FDEADC;
     display: flex;
-    gap:32px;
+    gap: 32px;
     padding: 32px;
     width: 820px;
     max-width: 1440px;
@@ -82,18 +83,18 @@ header{
     height: 120px;
 }
 
-.descriptionDishes{
+.descriptionDishes {
     flex: 1;
 }
 
-.priceDishes{
+.priceDishes {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
 }
 
-footer{
+footer {
     background-color: #E76C1F;
     height: 128px;
     display: flex;
