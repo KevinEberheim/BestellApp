@@ -34,4 +34,5 @@ h2{
 h3{
     font-size: 24px;
     margin-block: 0;
+    transform: translateY(-3px);
 }

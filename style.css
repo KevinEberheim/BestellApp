@@ -57,6 +57,7 @@ header {
     display: flex;
     padding-left: 120px;
     gap: 32px;
+    width: 100%;
 }
 
 .header_dishes img {
@@ -77,6 +78,7 @@ header {
     max-width: 1440px;
     margin-left: 120px;
     margin-top: 16px;
+    border-radius: 16px;
 }
 
 .dishes img {

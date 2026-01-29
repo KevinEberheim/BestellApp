@@ -11,3 +11,7 @@ a{
 .content{
     max-width: 1440px;
 }
+
+.invisible{
+    display: none;
+}
