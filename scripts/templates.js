@@ -45,7 +45,7 @@ function getBasketDishes(indexBasket){
     return `<div class="basketDishes">
                 <h3>${myBasketDishes[indexBasket].name}</h3>
                     <div class="basketCounter">
-                        <img src="./assets/icons/delete_2.svg" alt="delete.svg" onclick="removeFromBasket(${index})">
+                        <img src="./assets/icons/delete_2.svg" alt="delete.svg" onclick="removeFromBasket(${indexBasket})">
                         <h3>${myBasketDishes[indexBasket].amount}</h3>
                         <button onclick="increaseAmount(${indexBasket})">+</button>
                     </div>
