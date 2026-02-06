@@ -26,6 +26,13 @@ header {
     transform: translate(-50%, 50%);
 }
 
+main{
+    min-width: 0;
+    width: calc(100% + 365px);
+    position: relative;
+    z-index: 1;
+}
+
 .mainTitle {
     display: flex;
     flex-direction: column;
@@ -47,8 +54,16 @@ header {
 
 .mainDishes {
     margin-bottom: 64px;
-    grid-column: 1 / -1;
+    position: relative;
+    z-index: 1;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 365px;
+    align-items: start;
+}
+
 
 .header_dishes {
     background-color: #E76C1F;
