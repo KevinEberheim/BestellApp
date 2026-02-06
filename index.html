@@ -63,35 +63,41 @@
                 </section>
             </section>
         </main>
-        <section class="sidebar">
+        <section class="sidebar" id="sidebarId">
             <h2>Your Basket</h2>
             <div class="basketSize" id="basket">
-                <div class="basketDishes">
-                    <h3>Das ist ein Burger</h3>
-                    <div class="basketCounter">
-                        <img src="./assets/icons/delete_2.svg" alt="delete.svg">
-                        <h3>1</h3>
-                        <button>+</button>
-                    </div>
-                    <h3 class="basketPrice">16.90€</h3>
+
+            </div>
+            <div id="basketEmpty">
+                <p>Nothing here yet. <br> Go ahead and choose something delicious!</p>
+                <img class="shoppingCartImg" src="./assets/icons/shopping_cart.svg" alt="Warenkorb.svg">
+            </div>
+            <div id="basketFilled">
+                <div class="basketText">
+                    <h3>Subtotal</h3>
+                    <h3 id="subtotal"></h3>
                 </div>
+                <div class="basketText">
+                    <h3>Delivery fee</h3>
+                    <h3 id="deliveryFee"></h3>
+                </div>
+                <div class="h_line"></div>
+                <div class="basketText">
+                    <h3>Total</h3>
+                    <h3 id="total"></h3>
+                </div>
+                <button class="btnBasket" id="buyNow" onclick="openDialog()"></button>
             </div>
-            <div class="basketText">
-                <h3>Subtotal</h3>
-                <h3 id="subtotal">36.70€</h3>
-            </div>
-            <div class="basketText">
-                <h3>Delivery fee</h3>
-                <h3 id="deliveryFee">4.99€</h3>
-            </div>
-            <div class="h_line"></div>
-            <div class="basketText">
-                <h3>Total</h3>
-                <h3 id="total">41.69€</h3>
-            </div>
-            <button class="btnBasket" id="buyNow">Buy Now (41.69€)</button>
         </section>
     </div>
+    <dialog id="dialogOrderConfirmed" onclick="closeDialog()">
+            <button onclick="closeDialog()" class="closeButtonDialog">
+                &times;
+            </button>
+            <img src="./assets/img/FootTruck.png" alt="FootTruck.png">
+            <h1>Order confirmed</h1>
+            <h2>Your food is on the way</h2>
+        </dialog>
 
     <footer>
         <span>
@@ -105,5 +111,6 @@
         </span>
     </footer>
 </body>
+<script src="./scripts/dialog.js"></script>
 
 </html>

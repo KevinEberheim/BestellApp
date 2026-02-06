@@ -3,7 +3,7 @@ let myDishes = {
         {
             "Image": "./assets/img/Burger_1.png",
             "name": "Veggie mushroom black burger",
-            "description": "Mixed green salad, Tomatoes, Edamame, Mushrooms",
+            "description": "Mixed green salad, Tomatoes, Edame, Mushrooms",
             "price": 16.90,
             "amount": 1
         },
@@ -113,6 +113,8 @@ function renderAllDishes() {
     for (let indexSalad = 0; indexSalad < myDishes.Salad.length; indexSalad++) {
         saladRef.innerHTML += getSaladDishes(indexSalad);
     }
+
+    updateBasketView();
 }
 
 function pushToBasket(index, categoryName) {
@@ -143,8 +145,8 @@ function renderBasket() {
         basketRef.innerHTML += getBasketDishes(i);
         }
     }
-
-    renderPrices()
+    updateBasketView();
+    renderPrices();
 }
 
 function increaseAmount(index) {
@@ -181,4 +183,17 @@ function renderPrices() {
     deliveryFeeRef.innerHTML = `${deliveryFee.toFixed(2)}€`;
     totalRef.innerHTML = `${total.toFixed(2)}€`;
     buyNowRef.innerHTML = `Buy Now (${total.toFixed(2)}€)`;
+}
+
+function updateBasketView() {
+    let basketEmpty = document.getElementById('basketEmpty');
+    let basketFilled = document.getElementById('basketFilled');
+
+    if (myBasketDishes.length === 0) {
+        basketEmpty.style.display = 'block';
+        basketFilled.style.display = 'none';
+    } else {
+        basketEmpty.style.display = 'none';
+        basketFilled.style.display = 'block';
+    }
 }

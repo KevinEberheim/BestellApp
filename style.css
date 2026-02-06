@@ -28,7 +28,7 @@ header {
 
 main{
     min-width: 0;
-    width: calc(100% + 385px);
+    width: calc(100% + 435px);
     position: relative;
     z-index: 1;
 }
@@ -60,7 +60,7 @@ main{
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 385px;
+    grid-template-columns: 1fr 435px;
     align-items: start;
 }
 
@@ -87,10 +87,9 @@ main{
 .dishes {
     background-color: #FDEADC;
     display: flex;
-    gap: 32px;
+    gap: 24px;
     padding: 32px;
-    width: 820px;
-    max-width: 1440px;
+    max-width: 820px;
     margin-left: 120px;
     margin-top: 16px;
     border-radius: 16px;

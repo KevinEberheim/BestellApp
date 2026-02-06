@@ -41,7 +41,6 @@ function getSaladDishes(indexSalad) {
 }
 
 function getBasketDishes(indexBasket){
-
     return `<div class="basketDishes">
                 <h3>${myBasketDishes[indexBasket].name}</h3>
                     <div class="basketCounter">
@@ -55,7 +54,6 @@ function getBasketDishes(indexBasket){
 }
 
 function getBasketDishesAmount(indexBasket){
-
     return `<div class="basketDishes">
                 <h3>${myBasketDishes[indexBasket].name}</h3>
                     <div class="basketCounter">

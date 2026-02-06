@@ -30,3 +30,35 @@
     font-weight: 600;
     transform: translateY(-3px);
 }
+
+.closeButtonDialog {
+    background-color: #363534;;
+    color: white;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+dialog{
+    position: fixed;
+    margin: auto;
+    border: none;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #363534;
+    color: white;
+    text-align: center;
+    padding-block: 32px;
+    padding-inline: 48px;
+}
+
+dialog img{
+    height: 60px;
+    width: 80px;
+}
