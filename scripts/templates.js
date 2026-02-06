@@ -53,3 +53,18 @@ function getBasketDishes(indexBasket){
             </div> `
 
 }
+
+function getBasketDishesAmount(indexBasket){
+
+    return `<div class="basketDishes">
+                <h3>${myBasketDishes[indexBasket].name}</h3>
+                    <div class="basketCounter">
+                        <button onclick="decreaseAmount(${indexBasket})">-</button>
+                        <h3>${myBasketDishes[indexBasket].amount}</h3>
+                        <button onclick="increaseAmount(${indexBasket})">+</button>
+                    </div>
+                <img class="basketImg" src="./assets/icons/delete_2.svg" alt="delete.svg" onclick="removeFromBasket(${indexBasket})">
+                <h3 class="basketPrice">${(myBasketDishes[indexBasket].price * myBasketDishes[indexBasket].amount).toFixed(2)}€</h3>
+            </div> `
+
+}

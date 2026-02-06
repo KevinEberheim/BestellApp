@@ -4,7 +4,7 @@
     right: 0; */
     top: 0;
     margin-left: auto;
-    width: 365px;
+    width: 385px;
     max-height: 800px;
     margin-top: 380px;
     background-color: #363534;
@@ -33,18 +33,18 @@
     width: 300px;
 }
 
-.basketWidth{
+.basketSize {
     max-height: 440px;
     overflow-y: auto;
     padding-right: 12px;
 }
 
-.basketWidth::-webkit-scrollbar{
+.basketSize::-webkit-scrollbar {
     width: 6px;
 }
 
-.basketWidth::-webkit-scrollbar-thumb{
-    
+.basketSize::-webkit-scrollbar-thumb {
+
     background-color: #ccc;
     border-radius: 1px;
 }
@@ -60,13 +60,23 @@
     color: black;
 }
 
-.basketCounter{
+.basketCounter {
     grid-row-start: 2;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.basketPrice{
+.basketPrice {
     grid-row-start: 2;
+    justify-self: end;
+}
+
+.basketImg {
+    justify-self: end;
+    transform: translateY(10px);
+}
+
+.sidebar img {
+    cursor: pointer;
 }

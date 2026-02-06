@@ -93,7 +93,7 @@ let myDishes = {
     ],
 }
 
-let myBasketDishes=[];
+let myBasketDishes = [];
 
 function renderAllDishes() {
     let burgerRef = document.getElementById('burgerDishes');
@@ -119,34 +119,40 @@ function pushToBasket(index, categoryName) {
     let dishes = myDishes[categoryName][index];
 
     let existingIndex = myBasketDishes.findIndex(item => item.name === dishes.name);
-       
-    if (existingIndex !== -1){
+
+    if (existingIndex !== -1) {
         myBasketDishes[existingIndex].amount++;
     }
-    else{
-        myBasketDishes.push({...dishes, category: categoryName});
-    }    
+    else {
+        myBasketDishes.push({ ...dishes, category: categoryName });
+    }
 
     renderBasket();
 }
 
-function renderBasket(){
+function renderBasket() {
     let basketRef = document.getElementById('basket');
     basketRef.innerHTML = "";
 
     for (let i = 0; i < myBasketDishes.length; i++) {
+
+        if (myBasketDishes[i].amount > 1) {
+            basketRef.innerHTML += getBasketDishesAmount(i);
+        }
+        else{
         basketRef.innerHTML += getBasketDishes(i);
+        }
     }
 
     renderPrices()
 }
 
-function increaseAmount(index){
+function increaseAmount(index) {
     myBasketDishes[index].amount++;
     renderBasket();
 }
 
-function decreaseAmount(index){
+function decreaseAmount(index) {
     if (myBasketDishes[index].amount > 1) {
         myBasketDishes[index].amount--;
     } else {
@@ -161,7 +167,7 @@ function removeFromBasket(index) {
     renderBasket();
 }
 
-function renderPrices(){
+function renderPrices() {
     let subTotalRef = document.getElementById('subtotal')
     let totalRef = document.getElementById('total')
     let deliveryFeeRef = document.getElementById('deliveryFee')
