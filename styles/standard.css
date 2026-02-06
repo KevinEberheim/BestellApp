@@ -15,3 +15,7 @@ a{
 .invisible{
     display: none;
 }
+
+button{
+    cursor: pointer;
+}

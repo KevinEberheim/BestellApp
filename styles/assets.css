@@ -1,0 +1,32 @@
+.btnDishes{
+    border: none;
+    background-color: white;
+    border-radius: 24px;
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 600;
+}
+
+.btnBasket{
+    border: none;
+    background-color: #E76C1F;
+    border-radius: 24px;
+    padding: 8px;
+    font-size: 32px;
+    color: white;
+    width: 100%;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
+    margin-top: 16px;
+    padding-inline: 16px;
+}
+
+.btnAmount{
+    border: none;
+    background-color: #FDEADC;
+    font-size: 24px;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 600;
+    transform: translateY(-3px);
+}

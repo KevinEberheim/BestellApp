@@ -153,11 +153,7 @@ function increaseAmount(index) {
 }
 
 function decreaseAmount(index) {
-    if (myBasketDishes[index].amount > 1) {
-        myBasketDishes[index].amount--;
-    } else {
-        myBasketDishes.splice(index, 1);
-    }
+    myBasketDishes[index].amount--;
     renderBasket();
 }
 
@@ -171,6 +167,7 @@ function renderPrices() {
     let subTotalRef = document.getElementById('subtotal')
     let totalRef = document.getElementById('total')
     let deliveryFeeRef = document.getElementById('deliveryFee')
+    let buyNowRef = document.getElementById('buyNow')
     let subtotal = 0
     let deliveryFee = 4.99
 
@@ -183,4 +180,5 @@ function renderPrices() {
     subTotalRef.innerHTML = `${subtotal.toFixed(2)}€`;
     deliveryFeeRef.innerHTML = `${deliveryFee.toFixed(2)}€`;
     totalRef.innerHTML = `${total.toFixed(2)}€`;
+    buyNowRef.innerHTML = `Buy Now (${total.toFixed(2)}€)`;
 }

@@ -28,7 +28,7 @@ header {
 
 main{
     min-width: 0;
-    width: calc(100% + 365px);
+    width: calc(100% + 385px);
     position: relative;
     z-index: 1;
 }
@@ -60,7 +60,7 @@ main{
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 365px;
+    grid-template-columns: 1fr 385px;
     align-items: start;
 }
 
