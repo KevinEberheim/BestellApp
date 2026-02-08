@@ -22,8 +22,8 @@ function closeDialog() {
     }
 
     dialogRef.close();
-    for (let index = myBasketDishes.length-1; index > 0 ; index--) {
-        removeFromBasket(index) 
+    while (myBasketDishes.length > 0) {
+        removeFromBasket(myBasketDishes.length - 1); 
         console.log(myBasketDishes.length);
               
     }

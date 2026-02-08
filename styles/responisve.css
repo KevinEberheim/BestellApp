@@ -1,0 +1,99 @@
+@media (min-width:1321px) {
+    .invisible{
+        display: block;
+    }
+    .basketResponsive{
+        display: none;
+    }
+}
+
+
+@media (max-width: 1320px){
+    .basketResponsive{
+        display: flex;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+    }
+    .contentMain{
+        flex-direction: column;
+    }
+    .contentDishes{
+        width: 100%;
+    }
+    .header_dishes{
+        width: 100%;
+    }
+    .sidebar{
+        bottom: 72px;
+        max-width: none;
+        border-radius: 32px 32px 0px 0px;
+        top: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 860px){
+    header{
+        height: 450px;
+    }
+    .headerIconBurger{
+        height: 150px;
+        width: 150px;
+    }
+    .dishes{
+        flex-direction: column;
+    }
+    .dishes img{
+        height: auto;
+        max-height: 250px;
+    }
+    .priceDishes{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    .header_dishes h2{
+        transform: none;
+    }
+    .subtitle{
+        font-size: 20px;
+    }
+
+    .sidebar p{
+        font-size: 20px;
+    }
+    .shoppingCartImg{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width:650px){
+    .contentFooter{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:500px){
+    .title{
+        flex-direction: column-reverse;
+    }
+    dialog{
+        padding-inline: 16px;
+        padding-block: 16px;
+    }
+}
+
+@media (max-width:450px){
+    .contentFooter{
+        flex-direction: column;
+    }
+}
+

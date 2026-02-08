@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/responisve.css">
     <script src="./scripts/templates.js"></script>
     <script src="./script.js"></script>
 </head>
@@ -22,15 +23,15 @@
                 <img src="assets/icons/menu.svg" alt="menu.svg">
             </div>
         </nav>
-        <img class="header_Icon_Burger" src="assets/icons/Burger_Header.png" alt="Icon_Burger_img">
+        <img class="headerIconBurger" src="assets/icons/Burger_Header.png" alt="Icon_Burger_img">
     </header>
     <main>
         <section class="mainTitle">
             <div class="title">
-                <h1><span>Burger</span>Hause</h1>
+                <h1><span>Burger</span>House</h1>
                 <img src="./assets/img/Star.png" alt="Star.png">
             </div>
-            <span>
+            <span class="subtitle">
                 The best of Burgers, Pizza, and Greens, all in one great place
             </span>
         </section>
@@ -67,7 +68,7 @@
                 </section>
             </section>
 
-            <section class="sidebar" id="sidebarId">
+            <section class="sidebar invisible" id="sidebarId">
                 <h2>Your Basket</h2>
                 <div class="basketSize" id="basket">
 
@@ -94,6 +95,7 @@
                 </div>
             </section>
         </div>
+        <section class="basketResponsive"><button class="btnBasketResponisve" onclick="document.getElementById('sidebarId').classList.toggle('invisible')">Warenkorb</button></section>
     </main>
 
     <dialog id="dialogOrderConfirmed" onclick="closeDialog()">
@@ -108,6 +110,7 @@
     </dialog>
 
     <footer>
+        <div class="contentFooter">
         <span>
             &copy; 2025 BurgerHause
         </span>
@@ -117,6 +120,7 @@
         <span>
             Cookie Preferences
         </span>
+        </div>
     </footer>
 </body>
 <script src="./scripts/dialog.js"></script>
