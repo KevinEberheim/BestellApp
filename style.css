@@ -2,10 +2,6 @@ nav {
     background-color: #E76C1F;
     height: 128px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 120px;
-    padding-right: 40px;
 }
 
 header {
@@ -26,11 +22,20 @@ header {
     transform: translate(-50%, 50%);
 }
 
-main{
-    min-width: 0;
-    width: calc(100% + 435px);
-    position: relative;
-    z-index: 1;
+.contentHeader{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentMain{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .mainTitle {
@@ -52,27 +57,22 @@ main{
     height: 32px;
 }
 
+.contentDishes{
+    width: calc(100% - 435px);
+}
+
 .mainDishes {
     margin-bottom: 64px;
-    position: relative;
-    z-index: 1;
 }
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 435px;
-    align-items: start;
-}
-
 
 .header_dishes {
     background-color: #E76C1F;
     height: 60px;
     color: white;
     display: flex;
-    padding-left: 120px;
+    padding-left: 24px;
     gap: 32px;
-    width: 100%;
+    width: calc(100% + 435px)
 }
 
 .header_dishes img {
@@ -90,7 +90,7 @@ main{
     gap: 24px;
     padding: 32px;
     max-width: 820px;
-    margin-left: 120px;
+    margin-left: 24px;
     margin-top: 16px;
     border-radius: 16px;
 }

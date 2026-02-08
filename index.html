@@ -17,87 +17,95 @@
 <body onload="renderAllDishes()">
     <header>
         <nav>
-            <img src="assets/icons/Logo_02.svg" alt="Logo.svg">
-            <img src="assets/icons/menu.svg" alt="menu.svg">
+            <div class="contentHeader">
+                <img src="assets/icons/Logo_02.svg" alt="Logo.svg">
+                <img src="assets/icons/menu.svg" alt="menu.svg">
+            </div>
         </nav>
         <img class="header_Icon_Burger" src="assets/icons/Burger_Header.png" alt="Icon_Burger_img">
     </header>
-    <div class="grid">
-        <main>
-            <section class="mainTitle">
-                <div class="title">
-                    <h1><span>Burger</span>Hause</h1>
-                    <img src="./assets/img/Star.png" alt="Star.png">
-                </div>
-                <span>
-                    The best of Burgers, Pizza, and Greens, all in one great place
-                </span>
-            </section>
-            <section class="mainDishes">
-                <div class="header_dishes">
-                    <img src="./assets/icons/Burger_Section.png" alt="Burger.png">
-                    <h2>Burger</h2>
-                </div>
-                <section id="burgerDishes">
-
-                </section>
-            </section>
-            <section class="mainDishes">
-                <div class="header_dishes">
-                    <img src="./assets/icons/Pizza_Section.png" alt="Pizza.png">
-                    <h2>Pizza (30cm)</h2>
-                </div>
-
-                <section id="pizzaDishes">
-
-                </section>
-            </section>
-            <section class="mainDishes">
-                <div class="header_dishes">
-                    <img src="./assets/icons/Salad_Section.png" alt="Salad.png">
-                    <h2>Salad</h2>
-                </div>
-
-                <section id="saladDishes">
-
-                </section>
-            </section>
-        </main>
-        <section class="sidebar" id="sidebarId">
-            <h2>Your Basket</h2>
-            <div class="basketSize" id="basket">
-
+    <main>
+        <section class="mainTitle">
+            <div class="title">
+                <h1><span>Burger</span>Hause</h1>
+                <img src="./assets/img/Star.png" alt="Star.png">
             </div>
-            <div id="basketEmpty">
-                <p>Nothing here yet. <br> Go ahead and choose something delicious!</p>
-                <img class="shoppingCartImg" src="./assets/icons/shopping_cart.svg" alt="Warenkorb.svg">
-            </div>
-            <div id="basketFilled">
-                <div class="basketText">
-                    <h3>Subtotal</h3>
-                    <h3 id="subtotal"></h3>
-                </div>
-                <div class="basketText">
-                    <h3>Delivery fee</h3>
-                    <h3 id="deliveryFee"></h3>
-                </div>
-                <div class="h_line"></div>
-                <div class="basketText">
-                    <h3>Total</h3>
-                    <h3 id="total"></h3>
-                </div>
-                <button class="btnBasket" id="buyNow" onclick="openDialog()"></button>
-            </div>
+            <span>
+                The best of Burgers, Pizza, and Greens, all in one great place
+            </span>
         </section>
-    </div>
+        <div class="contentMain">
+            <section class="contentDishes">
+                <section class="mainDishes">
+                    <div class="header_dishes">
+                        <img src="./assets/icons/Burger_Section.png" alt="Burger.png">
+                        <h2>Burger</h2>
+                    </div>
+                    <section id="burgerDishes">
+
+                    </section>
+                </section>
+                <section class="mainDishes">
+                    <div class="header_dishes">
+                        <img src="./assets/icons/Pizza_Section.png" alt="Pizza.png">
+                        <h2>Pizza (30cm)</h2>
+                    </div>
+
+                    <section id="pizzaDishes">
+
+                    </section>
+                </section>
+                <section class="mainDishes">
+                    <div class="header_dishes">
+                        <img src="./assets/icons/Salad_Section.png" alt="Salad.png">
+                        <h2>Salad</h2>
+                    </div>
+
+                    <section id="saladDishes">
+
+                    </section>
+                </section>
+            </section>
+
+            <section class="sidebar" id="sidebarId">
+                <h2>Your Basket</h2>
+                <div class="basketSize" id="basket">
+
+                </div>
+                <div id="basketEmpty">
+                    <p>Nothing here yet. <br> Go ahead and choose something delicious!</p>
+                    <img class="shoppingCartImg" src="./assets/icons/shopping_cart.svg" alt="Warenkorb.svg">
+                </div>
+                <div id="basketFilled">
+                    <div class="basketText">
+                        <h3>Subtotal</h3>
+                        <h3 id="subtotal"></h3>
+                    </div>
+                    <div class="basketText">
+                        <h3>Delivery fee</h3>
+                        <h3 id="deliveryFee"></h3>
+                    </div>
+                    <div class="h_line"></div>
+                    <div class="basketText">
+                        <h3>Total</h3>
+                        <h3 id="total"></h3>
+                    </div>
+                    <button class="btnBasket" id="buyNow" onclick="openDialog()"></button>
+                </div>
+            </section>
+        </div>
+    </main>
+
     <dialog id="dialogOrderConfirmed" onclick="closeDialog()">
-            <button onclick="closeDialog()" class="closeButtonDialog">
-                &times;
-            </button>
-            <img src="./assets/img/FootTruck.png" alt="FootTruck.png">
-            <h1>Order confirmed</h1>
-            <h2>Your food is on the way</h2>
-        </dialog>
+        <div class="dialogContent">
+        <button onclick="closeDialog()" class="closeButtonDialog">
+            &times;
+        </button>
+        <img src="./assets/img/FootTruck.png" alt="FootTruck.png">
+        <h1>Order confirmed</h1>
+        <h2>Your food is on the way</h2>
+        </div>
+    </dialog>
 
     <footer>
         <span>

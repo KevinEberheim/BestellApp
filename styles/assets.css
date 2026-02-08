@@ -1,4 +1,4 @@
-.btnDishes{
+.btnDishes {
     border: none;
     background-color: white;
     border-radius: 24px;
@@ -8,7 +8,7 @@
     font-weight: 600;
 }
 
-.btnBasket{
+.btnBasket {
     border: none;
     background-color: #E76C1F;
     border-radius: 24px;
@@ -22,7 +22,7 @@
     padding-inline: 16px;
 }
 
-.btnAmount{
+.btnAmount {
     border: none;
     background-color: #FDEADC;
     font-size: 24px;
@@ -32,7 +32,8 @@
 }
 
 .closeButtonDialog {
-    background-color: #363534;;
+    background-color: #363534;
+    ;
     color: white;
     font-size: 40px;
     width: 40px;
@@ -43,14 +44,10 @@
     align-self: flex-end;
 }
 
-dialog{
-    position: fixed;
+dialog {
     margin: auto;
     border: none;
     border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #363534;
     color: white;
     text-align: center;
@@ -58,7 +55,17 @@ dialog{
     padding-inline: 48px;
 }
 
-dialog img{
+.dialogContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialogContent img {
     height: 60px;
     width: 80px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }

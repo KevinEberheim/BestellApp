@@ -1,20 +1,15 @@
 .sidebar {
     position: sticky;
     top: 0;
-    margin-left: auto;
     width: 100%;
     max-width: 435px;
     height: 850px;
-    margin-top: 380px;
     background-color: #363534;
     color: white;
     text-align: center;
-    float: right;
     border-radius: 32px 0px 0px 32px;
     padding-inline: 24px;
     padding-block: 32px;
-    z-index: 5;
-    align-self: flex-start;
 }
 
 .h_line {
