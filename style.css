@@ -59,6 +59,24 @@ header {
     height: 32px;
 }
 
+.menuDishes{
+    background-color: #FDEADC;
+    width: 100%;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.contentMenuDishes{
+    display: flex;
+    max-width: 1440px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .contentDishes {
     width: 100%;
 }
@@ -111,7 +129,7 @@ header {
 .dishes img {
     height: 120px;
     object-fit: cover;
-    aspect-ratio: 2/1;
+    border-radius: 16px;
 }
 
 .descriptionDishes {
