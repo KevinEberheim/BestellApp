@@ -121,10 +121,10 @@ function renderAllDishes() {
 function pushToBasket(index, categoryName) {
     let dishes = myDishes[categoryName][index];
 
-    let existingIndex = myBasketDishes.findIndex(item => item.name === dishes.name);
+    let basketIndex = myBasketDishes.findIndex(item => item.name === dishes.name);
 
-    if (existingIndex !== -1) {
-        myBasketDishes[existingIndex].amount++;
+    if (basketIndex !== -1) {
+        myBasketDishes[basketIndex].amount++;
     }
     else {
         myBasketDishes.push({ ...dishes, category: categoryName });

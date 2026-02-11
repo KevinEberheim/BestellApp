@@ -68,14 +68,14 @@ function getBasketDishesAmount(indexBasket){
 }
 
 function getDishButton(index, category) {
-    let basketItem = myBasketDishes.find(item => item.name === myDishes[category][index].name);
+    let basketIndex = myBasketDishes.findIndex(item => item.name === myDishes[category][index].name);
 
-    if (basketItem) {
+    if (basketIndex !== -1) {
         return `
             <div class="amountControl">
-                <button class="btnAmount"  onclick="decreaseAmount(${index})">-</button>
-                <h3>${myBasketDishes[index].amount}</h3>
-                <button class="btnAmount" onclick="increaseAmount(${index})">+</button>
+                <button class="btnAmount"  onclick="decreaseAmount(${basketIndex})">-</button>
+                <h3>${myBasketDishes[basketIndex].amount}</h3>
+                <button class="btnAmount" onclick="increaseAmount(${basketIndex})">+</button>
             </div>
         `;
     } else {
