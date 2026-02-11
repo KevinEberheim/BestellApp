@@ -28,6 +28,9 @@
         top: auto;
         height: auto;
     }
+    .basketSize{
+        max-height: 200px;
+    }
 }
 
 @media (max-width: 860px){
