@@ -7,7 +7,7 @@ function getBurgerDishes(indexBurger) {
                 </div>
                 <div class="priceDishes">
                     <h3>${myDishes.Burger[indexBurger].price.toFixed(2)}€</h3>
-                    <button class="btnDishes" onclick="pushToBasket(${indexBurger}, 'Burger')">Add to basket</button>
+                    ${getDishButton(indexBurger, 'Burger')}
                 </div>
             </div>`;
 }
@@ -21,7 +21,7 @@ function getPizzaDishes(indexPizza) {
                 </div>
                 <div class="priceDishes">
                     <h3>${myDishes.Pizza[indexPizza].price.toFixed(2)}€</h3>
-                    <button class="btnDishes" onclick="pushToBasket(${indexPizza}, 'Pizza')">Add to basket</button>
+                    ${getDishButton(indexPizza, 'Pizza')}
                 </div>
             </div>`;
 }
@@ -35,7 +35,7 @@ function getSaladDishes(indexSalad) {
                 </div>
                 <div class="priceDishes">
                     <h3>${myDishes.Salad[indexSalad].price.toFixed(2)}€</h3>
-                    <button class="btnDishes" onclick="pushToBasket(${indexSalad}, 'Salad')">Add to basket</button>
+                    ${getDishButton(indexSalad, 'Salad')}
                 </div>
             </div>`;
 }
@@ -65,4 +65,24 @@ function getBasketDishesAmount(indexBasket){
                 <h3 class="basketPrice">${(myBasketDishes[indexBasket].price * myBasketDishes[indexBasket].amount).toFixed(2)}€</h3>
             </div> `
 
+}
+
+function getDishButton(index, category) {
+    let basketItem = myBasketDishes.find(item => item.name === myDishes[category][index].name);
+
+    if (basketItem) {
+        return `
+            <div class="amountControl">
+                <button class="btnAmount"  onclick="decreaseAmount(${index})">-</button>
+                <h3>${myBasketDishes[index].amount}</h3>
+                <button class="btnAmount" onclick="increaseAmount(${index})">+</button>
+            </div>
+        `;
+    } else {
+        return `
+            <button class="btnDishes" onclick="pushToBasket(${index}, '${category}')">
+                Add to basket
+            </button>
+        `;
+    }
 }

@@ -117,6 +117,7 @@ function renderAllDishes() {
     updateBasketView();
 }
 
+
 function pushToBasket(index, categoryName) {
     let dishes = myDishes[categoryName][index];
 
@@ -128,7 +129,7 @@ function pushToBasket(index, categoryName) {
     else {
         myBasketDishes.push({ ...dishes, category: categoryName });
     }
-
+    renderAllDishes();
     renderBasket();
 }
 
@@ -141,12 +142,13 @@ function renderBasket() {
         if (myBasketDishes[i].amount > 1) {
             basketRef.innerHTML += getBasketDishesAmount(i);
         }
-        else{
-        basketRef.innerHTML += getBasketDishes(i);
+        else {
+            basketRef.innerHTML += getBasketDishes(i);
         }
     }
     updateBasketView();
     renderPrices();
+    renderAllDishes();
 }
 
 function increaseAmount(index) {
@@ -155,7 +157,12 @@ function increaseAmount(index) {
 }
 
 function decreaseAmount(index) {
-    myBasketDishes[index].amount--;
+    if (myBasketDishes[index].amount > 1) {
+        myBasketDishes[index].amount--;
+    }
+    else{
+        myBasketDishes.splice(index, 1);
+    }
     renderBasket();
 }
 

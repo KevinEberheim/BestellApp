@@ -67,6 +67,9 @@
 .basketImg {
     justify-self: end;
     transform: translateY(10px);
+}
+
+.sidebar img{
     cursor: pointer;
 }
 

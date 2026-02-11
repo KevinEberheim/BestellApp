@@ -22,7 +22,7 @@ header {
     transform: translate(-50%, 50%);
 }
 
-.contentHeader{
+.contentHeader {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -32,7 +32,7 @@ header {
     padding-inline: 24px;
 }
 
-.contentMain{
+.contentMain {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -60,8 +60,8 @@ header {
     height: 32px;
 }
 
-.contentDishes{
-    width: calc(100% - 435px);
+.contentDishes {
+    width: 100%;
 }
 
 .mainDishes {
@@ -76,7 +76,6 @@ header {
     padding-left: 24px;
     gap: 32px;
     width: calc(100% + 435px);
-    border-radius: 16px;
 }
 
 .header_dishes img {
@@ -122,7 +121,7 @@ footer {
     display: flex;
 }
 
-.contentFooter{
+.contentFooter {
     display: flex;
     align-items: center;
     max-width: 1440px;

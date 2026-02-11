@@ -8,6 +8,16 @@
     font-weight: 600;
 }
 
+.btnDishes:hover{
+    color: #E76C1F;
+}
+
+.amountControl{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+}
+
 .btnBasket {
     border: none;
     background-color: #E76C1F;
