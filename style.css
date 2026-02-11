@@ -76,6 +76,9 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
+.contentMenuDishes a:hover{
+    color: #E76C1F;
+}
 
 .contentDishes {
     width: 100%;
