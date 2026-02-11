@@ -37,7 +37,6 @@ header {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
-    position: relative;
 }
 
 .mainTitle {
@@ -71,11 +70,9 @@ header {
 .header_dishes {
     background-color: #E76C1F;
     height: 60px;
-    color: white;
-    display: flex;
-    padding-left: 24px;
-    gap: 32px;
-    width: calc(100% + 435px);
+    position: absolute;
+    left: 0;
+    width: 100%;
 }
 
 .header_dishes img {
@@ -85,6 +82,19 @@ header {
 
 .header_dishes h2 {
     transform: translateY(-18%);
+}
+
+.contentDishesHeader{
+    color: white;
+    display: flex;
+    padding-left: 24px;
+    gap: 32px;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.orderDishes{
+    padding-top: 60px;
 }
 
 .dishes {
