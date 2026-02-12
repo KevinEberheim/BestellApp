@@ -12,9 +12,7 @@ function closeDialog() {
 
     dialogRef.close();
     while (myBasketDishes.length > 0) {
-        removeFromBasket(myBasketDishes.length - 1); 
-        console.log(myBasketDishes.length);
-              
+        removeFromBasket(myBasketDishes.length - 1);               
     }
     sidebarRef.classList.remove("invisible")
 }
