@@ -166,23 +166,16 @@ function removeFromBasket(index) {
 }
 
 function renderPrices() {
-    let subTotalRef = document.getElementById('subtotal')
-    let totalRef = document.getElementById('total')
-    let deliveryFeeRef = document.getElementById('deliveryFee')
-    let buyNowRef = document.getElementById('buyNow')
     let subtotal = 0
     let deliveryFee = 4.99
-
     for (let dish of myBasketDishes) {
         subtotal += dish.price * dish.amount;
     }
-
     let total = subtotal + deliveryFee;
-
-    subTotalRef.innerHTML = `${subtotal.toFixed(2)}€`;
-    deliveryFeeRef.innerHTML = `${deliveryFee.toFixed(2)}€`;
-    totalRef.innerHTML = `${total.toFixed(2)}€`;
-    buyNowRef.innerHTML = `Buy Now (${total.toFixed(2)}€)`;
+    document.getElementById('subtotal').innerHTML = `${subtotal.toFixed(2)}€`;
+    document.getElementById('deliveryFee').innerHTML = `${deliveryFee.toFixed(2)}€`;
+    document.getElementById('total').innerHTML = `${total.toFixed(2)}€`;
+    document.getElementById('buyNow').innerHTML = `Buy Now (${total.toFixed(2)}€)`;
 }
 
 function updateBasketView() {
@@ -195,5 +188,15 @@ function updateBasketView() {
     } else {
         basketEmpty.style.display = 'none';
         basketFilled.style.display = 'block';
+    }
+}
+
+function renderDishButton(index, category) {
+    let basketIndex = myBasketDishes.findIndex(item => item.name === myDishes[category][index].name);
+
+    if (basketIndex !== -1) {
+        return getDishButtonAmount(basketIndex);
+    } else {
+        return getDishButton(index, category);
     }
 }

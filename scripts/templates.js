@@ -7,7 +7,7 @@ function getDishesTemplate(index, category) {
                 </div>
                 <div class="priceDishes">
                     <h3>${myDishes[category][index].price.toFixed(2)}€</h3>
-                    ${getDishButton(index, category)}
+                    ${renderDishButton(index, category)}
                 </div>
             </div>`;
 }
@@ -21,7 +21,7 @@ function getBasketDishes(indexBasket){
                         <button class="btnAmount" onclick="increaseAmount(${indexBasket})">+</button>
                     </div>
                 <h3 class="basketPrice">${(myBasketDishes[indexBasket].price * myBasketDishes[indexBasket].amount).toFixed(2)}€</h3>
-            </div> `
+            </div> `;
 
 }
 
@@ -35,26 +35,20 @@ function getBasketDishesAmount(indexBasket){
                     </div>
                 <img class="basketImg" src="./assets/icons/delete_2.svg" alt="delete.svg" onclick="removeFromBasket(${indexBasket})">
                 <h3 class="basketPrice">${(myBasketDishes[indexBasket].price * myBasketDishes[indexBasket].amount).toFixed(2)}€</h3>
-            </div> `
+            </div> `;
 
 }
 
-function getDishButton(index, category) {
-    let basketIndex = myBasketDishes.findIndex(item => item.name === myDishes[category][index].name);
+function getDishButton(index, category){
+    return `<button class="btnDishes" onclick="pushToBasket(${index}, '${category}')"> 
+                Add to basket
+            </button> `;
+}
 
-    if (basketIndex !== -1) {
-        return `
-            <div class="amountControl">
+function getDishButtonAmount(basketIndex){
+    return `<div class="amountControl">
                 <button class="btnAmount"  onclick="decreaseAmount(${basketIndex})">-</button>
                 <h3>${myBasketDishes[basketIndex].amount}</h3>
                 <button class="btnAmount" onclick="increaseAmount(${basketIndex})">+</button>
-            </div>
-        `;
-    } else {
-        return `
-            <button class="btnDishes" onclick="pushToBasket(${index}, '${category}')">
-                Add to basket
-            </button>
-        `;
-    }
+            </div>`;
 }
