@@ -1,41 +1,13 @@
-function getBurgerDishes(indexBurger) {
+function getDishesTemplate(index, category) {
     return ` <div class="dishes">
-                <img src="${myDishes.Burger[indexBurger].Image}" alt="Burger${indexBurger}.png">
+                <img src="${myDishes[category][index].Image}" alt="Burger${index}.png">
                 <div class="descriptionDishes">
-                    <h3>${myDishes.Burger[indexBurger].name}</h3>
-                    <span>${myDishes.Burger[indexBurger].description}</span>
+                    <h3>${myDishes[category][index].name}</h3>
+                    <span>${myDishes[category][index].description}</span>
                 </div>
                 <div class="priceDishes">
-                    <h3>${myDishes.Burger[indexBurger].price.toFixed(2)}€</h3>
-                    ${getDishButton(indexBurger, 'Burger')}
-                </div>
-            </div>`;
-}
-
-function getPizzaDishes(indexPizza) {
-    return ` <div class="dishes">
-                <img src="${myDishes.Pizza[indexPizza].Image}" alt="Pizza${indexPizza}.png">
-                <div class="descriptionDishes">
-                    <h3>${myDishes.Pizza[indexPizza].name}</h3>
-                    <span>${myDishes.Pizza[indexPizza].description}</span>
-                </div>
-                <div class="priceDishes">
-                    <h3>${myDishes.Pizza[indexPizza].price.toFixed(2)}€</h3>
-                    ${getDishButton(indexPizza, 'Pizza')}
-                </div>
-            </div>`;
-}
-
-function getSaladDishes(indexSalad) {
-    return ` <div class="dishes">
-                <img src="${myDishes.Salad[indexSalad].Image}" alt="Salad${indexSalad}.png">
-                <div class="descriptionDishes">
-                    <h3>${myDishes.Salad[indexSalad].name}</h3>
-                    <span>${myDishes.Salad[indexSalad].description}</span>
-                </div>
-                <div class="priceDishes">
-                    <h3>${myDishes.Salad[indexSalad].price.toFixed(2)}€</h3>
-                    ${getDishButton(indexSalad, 'Salad')}
+                    <h3>${myDishes[category][index].price.toFixed(2)}€</h3>
+                    ${getDishButton(index, category)}
                 </div>
             </div>`;
 }

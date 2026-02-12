@@ -96,25 +96,18 @@ let myDishes = {
 let myBasketDishes = [];
 
 function renderAllDishes() {
-    let burgerRef = document.getElementById('burgerDishes');
-    burgerRef.innerHTML = "";
-    for (let indexBurger = 0; indexBurger < myDishes.Burger.length; indexBurger++) {
-        burgerRef.innerHTML += getBurgerDishes(indexBurger);
-    }
-
-    let pizzaRef = document.getElementById('pizzaDishes');
-    pizzaRef.innerHTML = "";
-    for (let indexPizza = 0; indexPizza < myDishes.Pizza.length; indexPizza++) {
-        pizzaRef.innerHTML += getPizzaDishes(indexPizza);
-    }
-
-    let saladRef = document.getElementById('saladDishes');
-    saladRef.innerHTML = "";
-    for (let indexSalad = 0; indexSalad < myDishes.Salad.length; indexSalad++) {
-        saladRef.innerHTML += getSaladDishes(indexSalad);
-    }
-
+    renderCategory('Burger', 'burgerDishes');
+    renderCategory('Pizza', 'pizzaDishes');
+    renderCategory('Salad', 'saladDishes');    
     updateBasketView();
+}
+
+function renderCategory(category, containerID){
+    let containerRef = document.getElementById(containerID);
+    containerRef.innerHTML = "";
+    for (let index = 0; index < myDishes[category].length; index++) {
+        containerRef.innerHTML += getDishesTemplate(index, category);
+    }
 }
 
 

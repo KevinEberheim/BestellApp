@@ -10,6 +10,8 @@
     border-radius: 32px 0px 0px 32px;
     padding-inline: 24px;
     padding-block: 32px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .h_line {
@@ -30,6 +32,7 @@
 .basketSize {
     max-height: 455px;
     overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .basketSize::-webkit-scrollbar {
