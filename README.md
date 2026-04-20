@@ -57,4 +57,4 @@ For the best experience, use a browser that supports ES6+ JavaScript features.
 
 ---
 
-Created as part of the Developer Akademie curriculum.
+Developed as part of the Developer Akademie portfolio.
